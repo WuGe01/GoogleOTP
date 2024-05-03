@@ -25,4 +25,5 @@ Route::middleware(['2fa'])->group(function() {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
 Route::get('/setup2fa', [App\Http\Controllers\GoogleController::class, 'show'])->name('setup2fa');
+Route::get('/2faVerify', [App\Http\Controllers\GoogleController::class, 'verifyShow'])->name('2fa.verify.show');
 Route::post('/2faVerify', [App\Http\Controllers\GoogleController::class, 'verify'])->name('2fa.verify');

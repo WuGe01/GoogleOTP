@@ -22,6 +22,12 @@ class GoogleController extends Controller
         return view('auth.setup2fa', ['user' => $user, 'QRImage' => $QRImage]);
     }
 
+    public function verifyShow()
+    {
+
+        return view('google2fa.index');
+    }
+
     public function verify(Request $request)
     {
         $request->validate([
